@@ -336,6 +336,7 @@
     <Content Include="BootstrapTema\sidebar\style5.css" />
     <Content Include="BootstrapTema\StyleSheet2.css" />
     <Content Include="OgrenciEkle.aspx" />
+    <Content Include="OgrenciSil.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -357,6 +358,13 @@
     </Compile>
     <Compile Include="OgrenciEkle.aspx.designer.cs">
       <DependentUpon>OgrenciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciSil.aspx.cs">
+      <DependentUpon>OgrenciSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciSil.aspx.designer.cs">
+      <DependentUpon>OgrenciSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ogretmen.Master.cs">
       <DependentUpon>Ogretmen.Master</DependentUpon>
