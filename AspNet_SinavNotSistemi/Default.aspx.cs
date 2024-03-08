@@ -11,6 +11,9 @@ namespace AspNet_SinavNotSistemi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataSetTableAdapters.Tbl_OgrencilerTableAdapter dt = new DataSetTableAdapters.Tbl_OgrencilerTableAdapter();
+            Repeater1.DataSource = dt.OgrenciListesi(); //veriyi çekmek için
+            Repeater1.DataBind();//veriyi bağlamak için 
 
         }
     }
