@@ -36,6 +36,6 @@
                 <asp:TextBox ID="TxtOgrenciFotograf" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
-        <asp:Button ID="BtnKaydet" runat="server" Text="Kaydet" CssClass="btn btn-info" />
+        <asp:Button ID="BtnKaydet" runat="server" Text="Kaydet" CssClass="btn btn-info" OnClick="BtnKaydet_Click" />
     </form>
 </asp:Content>

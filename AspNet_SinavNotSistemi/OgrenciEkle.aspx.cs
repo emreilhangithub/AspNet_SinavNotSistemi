@@ -13,5 +13,12 @@ namespace AspNet_SinavNotSistemi
         {
 
         }
+
+        protected void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            DataSetTableAdapters.Tbl_OgrencilerTableAdapter dt = new DataSetTableAdapters.Tbl_OgrencilerTableAdapter();
+            dt.OgrenciEkle(TxtOgrenciAd.Text,TxtOgrenciSoyad.Text,TxtOgrenciTelefon.Text,TxtOgrenciMail.Text,TxtOgrenciSifre.Text,TxtOgrenciFotograf.Text);
+            Response.Redirect("Default.aspx"); //Yönlendirme Yapar.
+        }
     }
 }
