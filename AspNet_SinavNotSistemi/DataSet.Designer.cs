@@ -1373,6 +1373,8 @@ namespace AspNet_SinavNotSistemi {
             
             private global::System.Data.DataColumn columnDurum;
             
+            private global::System.Data.DataColumn columnNotId;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OgrNotlarDataTable() {
@@ -1472,6 +1474,14 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NotIdColumn {
+                get {
+                    return this.columnNotId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1507,7 +1517,7 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OgrNotlarRow AddOgrNotlarRow(int OgrenciId, string OgrenciAdSoyad, string DersAd, byte Sinav1, byte Sinav2, byte Sinav3, decimal Ortalama, bool Durum) {
+            public OgrNotlarRow AddOgrNotlarRow(int OgrenciId, string OgrenciAdSoyad, string DersAd, byte Sinav1, byte Sinav2, byte Sinav3, decimal Ortalama, bool Durum, int NotId) {
                 OgrNotlarRow rowOgrNotlarRow = ((OgrNotlarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OgrenciId,
@@ -1517,7 +1527,8 @@ namespace AspNet_SinavNotSistemi {
                         Sinav2,
                         Sinav3,
                         Ortalama,
-                        Durum};
+                        Durum,
+                        NotId};
                 rowOgrNotlarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOgrNotlarRow);
                 return rowOgrNotlarRow;
@@ -1548,6 +1559,7 @@ namespace AspNet_SinavNotSistemi {
                 this.columnSinav3 = base.Columns["Sinav3"];
                 this.columnOrtalama = base.Columns["Ortalama"];
                 this.columnDurum = base.Columns["Durum"];
+                this.columnNotId = base.Columns["NotId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1569,6 +1581,8 @@ namespace AspNet_SinavNotSistemi {
                 base.Columns.Add(this.columnOrtalama);
                 this.columnDurum = new global::System.Data.DataColumn("Durum", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDurum);
+                this.columnNotId = new global::System.Data.DataColumn("NotId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNotId);
                 this.columnOgrenciId.AllowDBNull = false;
                 this.columnOgrenciAdSoyad.ReadOnly = true;
                 this.columnOgrenciAdSoyad.MaxLength = 101;
@@ -2274,6 +2288,22 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int NotId {
+                get {
+                    try {
+                        return ((int)(this[this.tableOgrNotlar.NotIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NotId\' in table \'OgrNotlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOgrNotlar.NotIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsOgrenciAdSoyadNull() {
                 return this.IsNull(this.tableOgrNotlar.OgrenciAdSoyadColumn);
             }
@@ -2354,6 +2384,18 @@ namespace AspNet_SinavNotSistemi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDurumNull() {
                 this[this.tableOgrNotlar.DurumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNotIdNull() {
+                return this.IsNull(this.tableOgrNotlar.NotIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNotIdNull() {
+                this[this.tableOgrNotlar.NotIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3986,6 +4028,7 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Sinav3", "Sinav3");
             tableMapping.ColumnMappings.Add("Ortalama", "Ortalama");
             tableMapping.ColumnMappings.Add("Durum", "Durum");
+            tableMapping.ColumnMappings.Add("NotId", "NotId");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3999,12 +4042,23 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.OgrNotlar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT Tbl_Notlar.NotId,Tbl_Notlar.OgrenciId,
+(OgrenciAd + ' ' + OgrenciSoyad) AS 'OgrenciAdSoyad',
+DersAd,Sinav1,Sinav2,Sinav3,Ortalama,Durum 
+FROM Tbl_Notlar
+LEFT JOIN  Tbl_Ogrenciler ON Tbl_Ogrenciler.OgrenciId = Tbl_Notlar.OgrenciId
+LEFT JOIN  Tbl_Dersler ON Tbl_Dersler.DersId = Tbl_Notlar.DersId
+WHERE Tbl_Notlar.NotId = @NotId";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NotId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4026,6 +4080,42 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSet.OgrNotlarDataTable NotlariGetir() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet.OgrNotlarDataTable dataTable = new DataSet.OgrNotlarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillNotGetir2(DataSet.OgrNotlarDataTable dataTable, global::System.Nullable<int> NotId) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((NotId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NotId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet.OgrNotlarDataTable NotGetir2(global::System.Nullable<int> NotId) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((NotId.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NotId.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             DataSet.OgrNotlarDataTable dataTable = new DataSet.OgrNotlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

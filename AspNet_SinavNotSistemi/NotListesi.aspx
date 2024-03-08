@@ -7,7 +7,7 @@
 
     <table class="table table-bordered table-hover">
         <tr>
-            <th scope="col">ID</th>
+            <th scope="col">Ögrenci ID</th>
             <th scope="col">Ad Soyad</th>
             <th scope="col">Ders Ad</th>
             <th scope="col">Sınav 1</th>
@@ -30,7 +30,7 @@
                         <td><%#Eval("Ortalama")%></td>
                         <td><%#Eval("Durum")%></td>
                         <td>
-                            <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#"~/NotGuncelle.aspx?NotGuncelle="+ Eval("OgrenciId")%>' runat="server" CssClass="btn btn-success">Güncelle</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#"~/NotGuncelle.aspx?NotId="+ Eval("NotId")%>' runat="server" CssClass="btn btn-success">Güncelle</asp:HyperLink>
                         </td>
                     </tr>
                 </ItemTemplate>
