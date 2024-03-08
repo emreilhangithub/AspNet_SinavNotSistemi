@@ -335,6 +335,7 @@
     <Content Include="BootstrapTema\sidebar\style4.css" />
     <Content Include="BootstrapTema\sidebar\style5.css" />
     <Content Include="BootstrapTema\StyleSheet2.css" />
+    <Content Include="OgernciGuncelle.aspx" />
     <Content Include="OgrenciEkle.aspx" />
     <Content Include="OgrenciSil.aspx" />
     <Content Include="Web.config" />
@@ -351,6 +352,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgernciGuncelle.aspx.cs">
+      <DependentUpon>OgernciGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgernciGuncelle.aspx.designer.cs">
+      <DependentUpon>OgernciGuncelle.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciEkle.aspx.cs">
       <DependentUpon>OgrenciEkle.aspx</DependentUpon>
