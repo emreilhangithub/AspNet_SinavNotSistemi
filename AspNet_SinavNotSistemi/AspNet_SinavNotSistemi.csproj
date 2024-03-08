@@ -437,7 +437,10 @@
     <Content Include="BootstrapTema\sidebar\style4.css" />
     <Content Include="BootstrapTema\sidebar\style5.css" />
     <Content Include="BootstrapTema\StyleSheet2.css" />
+    <Content Include="DersEkle.aspx" />
+    <Content Include="DersGuncelle.aspx" />
     <Content Include="DersListesi.aspx" />
+    <Content Include="DersSil.aspx" />
     <Content Include="DuyuruEkle.aspx" />
     <Content Include="DuyuruGuncelle.aspx" />
     <Content Include="DuyuruListesi.aspx" />
@@ -462,12 +465,33 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DersEkle.aspx.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersEkle.aspx.designer.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersGuncelle.aspx.cs">
+      <DependentUpon>DersGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersGuncelle.aspx.designer.cs">
+      <DependentUpon>DersGuncelle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DersListesi.aspx.cs">
       <DependentUpon>DersListesi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DersListesi.aspx.designer.cs">
       <DependentUpon>DersListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersSil.aspx.cs">
+      <DependentUpon>DersSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersSil.aspx.designer.cs">
+      <DependentUpon>DersSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="DuyuruEkle.aspx.cs">
       <DependentUpon>DuyuruEkle.aspx</DependentUpon>
