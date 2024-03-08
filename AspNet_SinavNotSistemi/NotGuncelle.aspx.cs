@@ -46,7 +46,10 @@ namespace AspNet_SinavNotSistemi
 
         protected void BtnGuncelle_Click(object sender, EventArgs e)
         {
-
+            nid = Convert.ToInt32(Request.QueryString["NotId"].ToString());
+            DataSetTableAdapters.OgrNotlarTableAdapter dt = new DataSetTableAdapters.OgrNotlarTableAdapter();
+            dt.NotGuncelle(byte.Parse(TxtSinav1.Text), byte.Parse(TxtSinav2.Text), byte.Parse(TxtSinav3.Text), decimal.Parse(TxtOrtalama.Text),bool.Parse(TxtDurum.Text),nid);
+            Response.Redirect("NotListesi.aspx");
         }
     }
 }
