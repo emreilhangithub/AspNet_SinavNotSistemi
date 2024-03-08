@@ -441,6 +441,7 @@
     <Content Include="DuyuruGuncelle.aspx" />
     <Content Include="DuyuruListesi.aspx" />
     <Content Include="DuyuruSil.aspx" />
+    <Content Include="NotListesi.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciEkle.aspx" />
     <Content Include="OgrenciSil.aspx" />
@@ -486,6 +487,13 @@
     </Compile>
     <Compile Include="DuyuruSil.aspx.designer.cs">
       <DependentUpon>DuyuruSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotListesi.aspx.cs">
+      <DependentUpon>NotListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotListesi.aspx.designer.cs">
+      <DependentUpon>NotListesi.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciGuncelle.aspx.cs">
       <DependentUpon>OgrenciGuncelle.aspx</DependentUpon>
