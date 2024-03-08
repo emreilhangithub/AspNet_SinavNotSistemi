@@ -437,6 +437,7 @@
     <Content Include="BootstrapTema\sidebar\style4.css" />
     <Content Include="BootstrapTema\sidebar\style5.css" />
     <Content Include="BootstrapTema\StyleSheet2.css" />
+    <Content Include="DuyuruEkle.aspx" />
     <Content Include="DuyuruListesi.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciEkle.aspx" />
@@ -455,6 +456,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuyuruEkle.aspx.cs">
+      <DependentUpon>DuyuruEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuyuruEkle.aspx.designer.cs">
+      <DependentUpon>DuyuruEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="DuyuruListesi.aspx.cs">
       <DependentUpon>DuyuruListesi.aspx</DependentUpon>
