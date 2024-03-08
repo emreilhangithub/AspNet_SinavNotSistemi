@@ -26,7 +26,7 @@
                        <td> <%#Eval("OgrenciSifre")%></td>
                        <td>
                            <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#"~/OgrenciSil.aspx?OgrenciId="+ Eval("OgrenciId")%>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
-                           <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-success">Güncelle</asp:HyperLink>
+                           <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#"~/OgrenciGuncelle.aspx?OgrenciId="+ Eval("OgrenciId")%>' runat="server" CssClass="btn btn-success">Güncelle</asp:HyperLink>
                        </td>
                    </tr>
                </ItemTemplate>

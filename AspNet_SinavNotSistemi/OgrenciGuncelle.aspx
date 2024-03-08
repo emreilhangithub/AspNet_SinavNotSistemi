@@ -1,11 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Ogretmen.Master" AutoEventWireup="true" CodeBehind="OgernciGuncelle.aspx.cs" Inherits="AspNet_SinavNotSistemi.OgernciGuncelle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Ogretmen.Master" AutoEventWireup="true" CodeBehind="OgrenciGuncelle.aspx.cs" Inherits="AspNet_SinavNotSistemi.OgrenciGuncelle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
     <form id="Form1" runat="server">
+
         <div class="form-group">
+
             <div>
                 <asp:Label for="TxtOgrenciId" runat="server">Ögrenci Id</asp:Label>
                 <asp:TextBox ID="TxtOgrenciId" runat="server" CssClass="form-control"></asp:TextBox>
@@ -40,8 +42,11 @@
                 <asp:Label for="TxtOgrenciFotograf" runat="server">Ögrenci Fotoğraf Linki</asp:Label>
                 <asp:TextBox ID="TxtOgrenciFotograf" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
+
         </div>
-        <asp:Button ID="BtnGuncelle" runat="server" Text="Güncelle" CssClass="btn btn-primary" />
+
+        <asp:Button ID="BtnGuncelle" runat="server" Text="Güncelle" CssClass="btn btn-primary" OnClick="BtnGuncelle_Click" />
+
     </form>
 
 </asp:Content>

@@ -11,7 +11,7 @@ namespace AspNet_SinavNotSistemi
 {
 
 
-    public partial class OgernciGuncelle
+    public partial class OgrenciGuncelle
     {
 
         /// <summary>
