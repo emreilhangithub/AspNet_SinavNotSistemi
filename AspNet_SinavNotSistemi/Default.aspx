@@ -12,6 +12,7 @@
             <th scope="col">Telefon</th>
             <th scope="col">Mail</th>
             <th scope="col">Şifre</th>
+            <th scope="col">İşemler</th>
         </tr>
         <tbody>
             <asp:Repeater ID="Repeater1" runat="server">
@@ -23,6 +24,10 @@
                        <td> <%#Eval("OgrenciTelefon")%></td>
                        <td> <%#Eval("OgrenciMail")%></td>
                        <td> <%#Eval("OgrenciSifre")%></td>
+                       <td>
+                           <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
+                           <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-success">Güncelle</asp:HyperLink>
+                       </td>
                    </tr>
                </ItemTemplate>
             </asp:Repeater>
