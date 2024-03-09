@@ -11,7 +11,7 @@ namespace AspNet_SinavNotSistemi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TxtOgrenciNumara.Text = Request.QueryString["OgrenciNumara"];
         }
     }
 }

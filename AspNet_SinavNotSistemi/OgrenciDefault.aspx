@@ -8,7 +8,7 @@
         <div class="form-group">
             <br />
             <div>
-                <asp:TextBox ID="TxtOgrenciSayisi" runat="server" CssClass="form-control" Enabled="False">Numara</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciNumara" runat="server" CssClass="form-control" Enabled="False">Numara</asp:TextBox>
             </div>
             <br />
 
