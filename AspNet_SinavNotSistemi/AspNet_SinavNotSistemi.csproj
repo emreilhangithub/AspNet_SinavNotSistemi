@@ -457,6 +457,7 @@
     <Content Include="NotListesi.aspx" />
     <Content Include="OgrenciDefault.aspx" />
     <Content Include="OgrenciGelenMesajlar.aspx" />
+    <Content Include="OgrenciGidenMesajlar.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciEkle.aspx" />
     <Content Include="OgrenciNotu.aspx" />
@@ -610,6 +611,13 @@
     </Compile>
     <Compile Include="OgrenciGelenMesajlar.aspx.designer.cs">
       <DependentUpon>OgrenciGelenMesajlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciGidenMesajlar.aspx.cs">
+      <DependentUpon>OgrenciGidenMesajlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciGidenMesajlar.aspx.designer.cs">
+      <DependentUpon>OgrenciGidenMesajlar.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciGuncelle.aspx.cs">
       <DependentUpon>OgrenciGuncelle.aspx</DependentUpon>
