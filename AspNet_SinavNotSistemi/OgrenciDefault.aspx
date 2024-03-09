@@ -13,35 +13,41 @@
             <br />
 
             <div>
-                <asp:TextBox ID="TxtOgretmenSayisi" runat="server" CssClass="form-control" Enabled="False">Ad Soyad</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciAd" runat="server" CssClass="form-control" Enabled="False">Ad</asp:TextBox>
             </div>
             <br />
 
             <div>
-                <asp:TextBox ID="TxtDersSayisi" runat="server" CssClass="form-control" Enabled="False">Mail</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciSoyad" runat="server" CssClass="form-control" Enabled="False"> Soyad</asp:TextBox>
             </div>
             <br />
 
             <div>
-                <asp:TextBox ID="TxtAtilanMesajSayisi" runat="server" CssClass="form-control" Enabled="False">Telefon</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciMail" runat="server" CssClass="form-control" Enabled="False">Mail</asp:TextBox>
             </div>
             <br />
 
             <div>
-                <asp:TextBox ID="TxtDuyuruSayisi" runat="server" CssClass="form-control" Enabled="False">Şifre</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciTelefon" runat="server" CssClass="form-control" Enabled="False">Telefon</asp:TextBox>
             </div>
             <br />
 
             <div>
-                <asp:TextBox ID="TxtMatematikNotOrtalamasi" runat="server" CssClass="form-control" Enabled="False">Cinsiyet</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciSifre" runat="server" CssClass="form-control" Enabled="False">Şifre</asp:TextBox>
             </div>
             <br />
 
             <div>
-                <asp:TextBox ID="TxtSinav1EnBasariliOgrenci" runat="server" CssClass="form-control" Enabled="False">Fotoğraf</asp:TextBox>
+                <asp:TextBox ID="TxtOgrenciCinsiyet" runat="server" CssClass="form-control" Enabled="False">Cinsiyet</asp:TextBox>
             </div>
             <br />
 
+            <div>
+                <asp:TextBox ID="TxtOgrenciFotograf" runat="server" CssClass="form-control" Enabled="False">Fotoğraf</asp:TextBox>
+            </div>
+            <br />
+
+            <asp:Button ID="BtnGuncelle" runat="server" Text="Güncelle" CssClass="btn btn-primary" />
 
         </div>
 

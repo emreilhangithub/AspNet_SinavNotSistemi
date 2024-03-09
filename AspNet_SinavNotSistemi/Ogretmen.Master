@@ -84,12 +84,12 @@
                         Grafikler
                     </a>
                 </li>
-                <li>
+                <%--<li>
                     <a href="Galeri.aspx">
                         <i class="glyphicon glyphicon-picture"></i>
                         Galeri
                     </a>
-                </li>
+                </li>--%>
                 <li>
                     <a href="CikisYap.aspx">
                         <i class="glyphicon glyphicon-eye-close"></i>

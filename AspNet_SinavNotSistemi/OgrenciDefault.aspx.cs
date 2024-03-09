@@ -11,7 +11,19 @@ namespace AspNet_SinavNotSistemi
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var ogrenciNumarasi = "0";
             TxtOgrenciNumara.Text = Request.QueryString["OgrenciNumara"];
+            ogrenciNumarasi = TxtOgrenciNumara.Text;
+            TxtOgrenciNumara.Text = "Ögrenci Numarası = " + TxtOgrenciNumara.Text;
+
+            DataSetTableAdapters.Tbl_OgrencilerTableAdapter dt = new DataSetTableAdapters.Tbl_OgrencilerTableAdapter();
+            TxtOgrenciAd.Text = "Ögrenci Ad = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciAd;
+            TxtOgrenciSoyad.Text = "Ögrenci Soyad = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciSoyad;
+            TxtOgrenciMail.Text = "Ögrenci Mail = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciMail;
+            TxtOgrenciSifre.Text = "Ögrenci Şifre = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciSifre;
+            TxtOgrenciTelefon.Text = "Ögrenci Telefon = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciTelefon;
+            TxtOgrenciFotograf.Text = "Ögrenci Fotograf = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciFotograf;
+            TxtOgrenciCinsiyet.Text = "Ögrenci Cinsiyet = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciCinsiyet;
         }
     }
 }

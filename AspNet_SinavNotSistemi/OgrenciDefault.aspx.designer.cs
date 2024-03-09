@@ -33,57 +33,75 @@ namespace AspNet_SinavNotSistemi
         protected global::System.Web.UI.WebControls.TextBox TxtOgrenciNumara;
 
         /// <summary>
-        /// TxtOgretmenSayisi control.
+        /// TxtOgrenciAd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtOgretmenSayisi;
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciAd;
 
         /// <summary>
-        /// TxtDersSayisi control.
+        /// TxtOgrenciSoyad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDersSayisi;
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciSoyad;
 
         /// <summary>
-        /// TxtAtilanMesajSayisi control.
+        /// TxtOgrenciMail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtAtilanMesajSayisi;
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciMail;
 
         /// <summary>
-        /// TxtDuyuruSayisi control.
+        /// TxtOgrenciTelefon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDuyuruSayisi;
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciTelefon;
 
         /// <summary>
-        /// TxtMatematikNotOrtalamasi control.
+        /// TxtOgrenciSifre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtMatematikNotOrtalamasi;
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciSifre;
 
         /// <summary>
-        /// TxtSinav1EnBasariliOgrenci control.
+        /// TxtOgrenciCinsiyet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtSinav1EnBasariliOgrenci;
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciCinsiyet;
+
+        /// <summary>
+        /// TxtOgrenciFotograf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtOgrenciFotograf;
+
+        /// <summary>
+        /// BtnGuncelle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnGuncelle;
     }
 }
