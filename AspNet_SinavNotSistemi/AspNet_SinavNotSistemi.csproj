@@ -455,6 +455,7 @@
     <Content Include="MesajOlustur.aspx" />
     <Content Include="NotGuncelle.aspx" />
     <Content Include="NotListesi.aspx" />
+    <Content Include="OgrenciCikis.aspx" />
     <Content Include="OgrenciDefault.aspx" />
     <Content Include="OgrenciDuyuru.aspx" />
     <Content Include="OgrenciGelenMesajlar.aspx" />
@@ -466,6 +467,7 @@
     <Content Include="OgrenciProfilGuncelle.aspx" />
     <Content Include="OgrenciSil.aspx" />
     <Content Include="BootstrapTema\StyleSheet.css" />
+    <Content Include="OgretmenCikis.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -600,6 +602,13 @@
     <Compile Include="Ogrenci.Master.designer.cs">
       <DependentUpon>Ogrenci.Master</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciCikis.aspx.cs">
+      <DependentUpon>OgrenciCikis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciCikis.aspx.designer.cs">
+      <DependentUpon>OgrenciCikis.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OgrenciDefault.aspx.cs">
       <DependentUpon>OgrenciDefault.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -676,6 +685,13 @@
     </Compile>
     <Compile Include="Ogretmen.Master.designer.cs">
       <DependentUpon>Ogretmen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenCikis.aspx.cs">
+      <DependentUpon>OgretmenCikis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgretmenCikis.aspx.designer.cs">
+      <DependentUpon>OgretmenCikis.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

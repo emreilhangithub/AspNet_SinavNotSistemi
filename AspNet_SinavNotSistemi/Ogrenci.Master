@@ -58,14 +58,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="CikisYap.aspx">
+                    <a href="OgrenciCikis.aspx">
                         <i class="glyphicon glyphicon-eye-close"></i>
                         Çıkış
                     </a>
                 </li>
             </ul>
-
-            <div style="margin-left: 10px">Ad Soyad</div>
 
         </nav>
 
