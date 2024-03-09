@@ -11,79 +11,61 @@ namespace AspNet_SinavNotSistemi
 {
 
 
-    public partial class Login
+    public partial class OgrenciMesajOlustur
     {
 
         /// <summary>
-        /// form1 control.
+        /// Form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
 
         /// <summary>
-        /// Image1 control.
+        /// TxtMesajGonderen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.TextBox TxtMesajGonderen;
 
         /// <summary>
-        /// TxtNumara control.
+        /// TxtMesajAlici control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtNumara;
+        protected global::System.Web.UI.WebControls.TextBox TxtMesajAlici;
 
         /// <summary>
-        /// TxtSifre control.
+        /// TxtMesajBaslik control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtSifre;
+        protected global::System.Web.UI.WebControls.TextBox TxtMesajBaslik;
 
         /// <summary>
-        /// BtnGirisYap control.
+        /// TextAreaMesajIcerik control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnGirisYap;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextAreaMesajIcerik;
 
         /// <summary>
-        /// BtnOgretmenGirisYap control.
+        /// BtnMesajGonder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnOgretmenGirisYap;
-
-        /// <summary>
-        /// BtnSifremiUnuttum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSifremiUnuttum;
-
-        /// <summary>
-        /// BtnYardim control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnYardim;
+        protected global::System.Web.UI.WebControls.Button BtnMesajGonder;
     }
 }

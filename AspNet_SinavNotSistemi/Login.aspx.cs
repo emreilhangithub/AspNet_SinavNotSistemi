@@ -37,5 +37,25 @@ namespace AspNet_SinavNotSistemi
             baglanti.Close();
            
         }
+
+        protected void BtnOgretmenGirisYap_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("SELECT * FROM Tbl_Ogretmenler WHERE OgretmenNumara = @OgretmenNumara and OgretmenSifre = @OgretmenSifre", baglanti);
+            komut.Parameters.AddWithValue("@OgretmenNumara", TxtNumara.Text);
+            komut.Parameters.AddWithValue("@OgretmenSifre", TxtSifre.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            if (dr.Read())
+            {
+                Session.Add("OgretmenNumara", TxtNumara.Text);
+                Response.Redirect("Default.aspx");
+                //Response.Redirect("OgrenciDefault.aspx?OgrenciNumara=" + TxtNumara.Text);
+            }
+            else
+            {
+                TxtNumara.Text = "Hatalı Giriş";
+            }
+            baglanti.Close();
+        }
     }
 }

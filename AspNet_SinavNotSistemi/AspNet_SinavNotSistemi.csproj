@@ -456,10 +456,12 @@
     <Content Include="NotGuncelle.aspx" />
     <Content Include="NotListesi.aspx" />
     <Content Include="OgrenciDefault.aspx" />
+    <Content Include="OgrenciDuyuru.aspx" />
     <Content Include="OgrenciGelenMesajlar.aspx" />
     <Content Include="OgrenciGidenMesajlar.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciEkle.aspx" />
+    <Content Include="OgrenciMesajOlustur.aspx" />
     <Content Include="OgrenciNotu.aspx" />
     <Content Include="OgrenciProfilGuncelle.aspx" />
     <Content Include="OgrenciSil.aspx" />
@@ -605,6 +607,13 @@
     <Compile Include="OgrenciDefault.aspx.designer.cs">
       <DependentUpon>OgrenciDefault.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciDuyuru.aspx.cs">
+      <DependentUpon>OgrenciDuyuru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciDuyuru.aspx.designer.cs">
+      <DependentUpon>OgrenciDuyuru.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OgrenciGelenMesajlar.aspx.cs">
       <DependentUpon>OgrenciGelenMesajlar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -632,6 +641,13 @@
     </Compile>
     <Compile Include="OgrenciEkle.aspx.designer.cs">
       <DependentUpon>OgrenciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciMesajOlustur.aspx.cs">
+      <DependentUpon>OgrenciMesajOlustur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciMesajOlustur.aspx.designer.cs">
+      <DependentUpon>OgrenciMesajOlustur.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciNotu.aspx.cs">
       <DependentUpon>OgrenciNotu.aspx</DependentUpon>

@@ -46,7 +46,7 @@
                         </ul>
                     </li>
                 <li>
-                    <a href="DuyuruListesi.aspx">
+                    <a href="OgrenciDuyuru.aspx">
                         <i class="glyphicon glyphicon-bell"></i>
                         Duyurular
                     </a>
