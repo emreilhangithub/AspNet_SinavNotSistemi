@@ -54,7 +54,7 @@
                     <ul class="collapse list-unstyled" id="homeSubmenu3">
                         <li><a href="GelenMesajlar.aspx"><i class="glyphicon glyphicon-download"></i>Gelen Mesajlar</a></li>
                         <li><a href="GidenMesajlar.aspx"><i class="glyphicon glyphicon-upload"></i>Giden Mesajlar</a></li>
-                        <li><a href="MesajYaz.aspx"><i class="glyphicon glyphicon-edit"></i>Mesaj Oluştur</a></li>
+                        <li><a href="MesajOlustur.aspx"><i class="glyphicon glyphicon-edit"></i>Mesaj Oluştur</a></li>
                     </ul></li>
                 <li class="active">
                     <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false">
