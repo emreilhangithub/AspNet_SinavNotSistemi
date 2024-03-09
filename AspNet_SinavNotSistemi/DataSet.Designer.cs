@@ -34,6 +34,8 @@ namespace AspNet_SinavNotSistemi {
         
         private Tbl_DerslerDataTable tableTbl_Dersler;
         
+        private Tbl_MesajlarDataTable tableTbl_Mesajlar;
+        
         private global::System.Data.DataRelation relationFK_Tbl_Duyurular_Tbl_Ogretmenler;
         
         private global::System.Data.DataRelation relationFK_Tbl_Ogretmenler_Tbl_Dersler;
@@ -80,6 +82,9 @@ namespace AspNet_SinavNotSistemi {
                 }
                 if ((ds.Tables["Tbl_Dersler"] != null)) {
                     base.Tables.Add(new Tbl_DerslerDataTable(ds.Tables["Tbl_Dersler"]));
+                }
+                if ((ds.Tables["Tbl_Mesajlar"] != null)) {
+                    base.Tables.Add(new Tbl_MesajlarDataTable(ds.Tables["Tbl_Mesajlar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -146,6 +151,16 @@ namespace AspNet_SinavNotSistemi {
         public Tbl_DerslerDataTable Tbl_Dersler {
             get {
                 return this.tableTbl_Dersler;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Tbl_MesajlarDataTable Tbl_Mesajlar {
+            get {
+                return this.tableTbl_Mesajlar;
             }
         }
         
@@ -231,6 +246,9 @@ namespace AspNet_SinavNotSistemi {
                 if ((ds.Tables["Tbl_Dersler"] != null)) {
                     base.Tables.Add(new Tbl_DerslerDataTable(ds.Tables["Tbl_Dersler"]));
                 }
+                if ((ds.Tables["Tbl_Mesajlar"] != null)) {
+                    base.Tables.Add(new Tbl_MesajlarDataTable(ds.Tables["Tbl_Mesajlar"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -294,6 +312,12 @@ namespace AspNet_SinavNotSistemi {
                     this.tableTbl_Dersler.InitVars();
                 }
             }
+            this.tableTbl_Mesajlar = ((Tbl_MesajlarDataTable)(base.Tables["Tbl_Mesajlar"]));
+            if ((initTable == true)) {
+                if ((this.tableTbl_Mesajlar != null)) {
+                    this.tableTbl_Mesajlar.InitVars();
+                }
+            }
             this.relationFK_Tbl_Duyurular_Tbl_Ogretmenler = this.Relations["FK_Tbl_Duyurular_Tbl_Ogretmenler"];
             this.relationFK_Tbl_Ogretmenler_Tbl_Dersler = this.Relations["FK_Tbl_Ogretmenler_Tbl_Dersler"];
         }
@@ -316,6 +340,8 @@ namespace AspNet_SinavNotSistemi {
             base.Tables.Add(this.tableOgrNotlar);
             this.tableTbl_Dersler = new Tbl_DerslerDataTable();
             base.Tables.Add(this.tableTbl_Dersler);
+            this.tableTbl_Mesajlar = new Tbl_MesajlarDataTable();
+            base.Tables.Add(this.tableTbl_Mesajlar);
             this.relationFK_Tbl_Duyurular_Tbl_Ogretmenler = new global::System.Data.DataRelation("FK_Tbl_Duyurular_Tbl_Ogretmenler", new global::System.Data.DataColumn[] {
                         this.tableTbl_Ogretmenler.OgretmenIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableTbl_Duyurular.DuyuruYapanOgretmenColumn}, false);
@@ -353,6 +379,12 @@ namespace AspNet_SinavNotSistemi {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeTbl_Dersler() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeTbl_Mesajlar() {
             return false;
         }
         
@@ -426,6 +458,9 @@ namespace AspNet_SinavNotSistemi {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Tbl_DerslerRowChangeEventHandler(object sender, Tbl_DerslerRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Tbl_MesajlarRowChangeEventHandler(object sender, Tbl_MesajlarRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -446,6 +481,8 @@ namespace AspNet_SinavNotSistemi {
             private global::System.Data.DataColumn columnOgrenciSifre;
             
             private global::System.Data.DataColumn columnOgrenciFotograf;
+            
+            private global::System.Data.DataColumn columnOgrenciNumara;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -538,6 +575,14 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn OgrenciNumaraColumn {
+                get {
+                    return this.columnOgrenciNumara;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -573,7 +618,7 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_OgrencilerRow AddTbl_OgrencilerRow(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciFotograf) {
+            public Tbl_OgrencilerRow AddTbl_OgrencilerRow(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciFotograf, string OgrenciNumara) {
                 Tbl_OgrencilerRow rowTbl_OgrencilerRow = ((Tbl_OgrencilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -582,7 +627,8 @@ namespace AspNet_SinavNotSistemi {
                         OgrenciTelefon,
                         OgrenciMail,
                         OgrenciSifre,
-                        OgrenciFotograf};
+                        OgrenciFotograf,
+                        OgrenciNumara};
                 rowTbl_OgrencilerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTbl_OgrencilerRow);
                 return rowTbl_OgrencilerRow;
@@ -619,6 +665,7 @@ namespace AspNet_SinavNotSistemi {
                 this.columnOgrenciMail = base.Columns["OgrenciMail"];
                 this.columnOgrenciSifre = base.Columns["OgrenciSifre"];
                 this.columnOgrenciFotograf = base.Columns["OgrenciFotograf"];
+                this.columnOgrenciNumara = base.Columns["OgrenciNumara"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -638,6 +685,8 @@ namespace AspNet_SinavNotSistemi {
                 base.Columns.Add(this.columnOgrenciSifre);
                 this.columnOgrenciFotograf = new global::System.Data.DataColumn("OgrenciFotograf", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOgrenciFotograf);
+                this.columnOgrenciNumara = new global::System.Data.DataColumn("OgrenciNumara", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOgrenciNumara);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOgrenciId}, true));
                 this.columnOgrenciId.AutoIncrement = true;
@@ -651,6 +700,7 @@ namespace AspNet_SinavNotSistemi {
                 this.columnOgrenciTelefon.MaxLength = 20;
                 this.columnOgrenciMail.MaxLength = 50;
                 this.columnOgrenciSifre.MaxLength = 50;
+                this.columnOgrenciNumara.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2036,6 +2086,328 @@ namespace AspNet_SinavNotSistemi {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Tbl_MesajlarDataTable : global::System.Data.TypedTableBase<Tbl_MesajlarRow> {
+            
+            private global::System.Data.DataColumn columnMesajId;
+            
+            private global::System.Data.DataColumn columnMesajGonderen;
+            
+            private global::System.Data.DataColumn columnMesajAlici;
+            
+            private global::System.Data.DataColumn columnMesajBaslik;
+            
+            private global::System.Data.DataColumn columnMesajIcerik;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarDataTable() {
+                this.TableName = "Tbl_Mesajlar";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Tbl_MesajlarDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Tbl_MesajlarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesajIdColumn {
+                get {
+                    return this.columnMesajId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesajGonderenColumn {
+                get {
+                    return this.columnMesajGonderen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesajAliciColumn {
+                get {
+                    return this.columnMesajAlici;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesajBaslikColumn {
+                get {
+                    return this.columnMesajBaslik;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesajIcerikColumn {
+                get {
+                    return this.columnMesajIcerik;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarRow this[int index] {
+                get {
+                    return ((Tbl_MesajlarRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Tbl_MesajlarRowChangeEventHandler Tbl_MesajlarRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Tbl_MesajlarRowChangeEventHandler Tbl_MesajlarRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Tbl_MesajlarRowChangeEventHandler Tbl_MesajlarRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Tbl_MesajlarRowChangeEventHandler Tbl_MesajlarRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddTbl_MesajlarRow(Tbl_MesajlarRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarRow AddTbl_MesajlarRow(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik) {
+                Tbl_MesajlarRow rowTbl_MesajlarRow = ((Tbl_MesajlarRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        MesajGonderen,
+                        MesajAlici,
+                        MesajBaslik,
+                        MesajIcerik};
+                rowTbl_MesajlarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTbl_MesajlarRow);
+                return rowTbl_MesajlarRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarRow FindByMesajId(int MesajId) {
+                return ((Tbl_MesajlarRow)(this.Rows.Find(new object[] {
+                            MesajId})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Tbl_MesajlarDataTable cln = ((Tbl_MesajlarDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Tbl_MesajlarDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnMesajId = base.Columns["MesajId"];
+                this.columnMesajGonderen = base.Columns["MesajGonderen"];
+                this.columnMesajAlici = base.Columns["MesajAlici"];
+                this.columnMesajBaslik = base.Columns["MesajBaslik"];
+                this.columnMesajIcerik = base.Columns["MesajIcerik"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnMesajId = new global::System.Data.DataColumn("MesajId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMesajId);
+                this.columnMesajGonderen = new global::System.Data.DataColumn("MesajGonderen", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMesajGonderen);
+                this.columnMesajAlici = new global::System.Data.DataColumn("MesajAlici", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMesajAlici);
+                this.columnMesajBaslik = new global::System.Data.DataColumn("MesajBaslik", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMesajBaslik);
+                this.columnMesajIcerik = new global::System.Data.DataColumn("MesajIcerik", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMesajIcerik);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnMesajId}, true));
+                this.columnMesajId.AutoIncrement = true;
+                this.columnMesajId.AutoIncrementSeed = -1;
+                this.columnMesajId.AutoIncrementStep = -1;
+                this.columnMesajId.AllowDBNull = false;
+                this.columnMesajId.ReadOnly = true;
+                this.columnMesajId.Unique = true;
+                this.columnMesajGonderen.MaxLength = 5;
+                this.columnMesajAlici.MaxLength = 5;
+                this.columnMesajBaslik.MaxLength = 50;
+                this.columnMesajIcerik.MaxLength = 500;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarRow NewTbl_MesajlarRow() {
+                return ((Tbl_MesajlarRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Tbl_MesajlarRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Tbl_MesajlarRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Tbl_MesajlarRowChanged != null)) {
+                    this.Tbl_MesajlarRowChanged(this, new Tbl_MesajlarRowChangeEvent(((Tbl_MesajlarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Tbl_MesajlarRowChanging != null)) {
+                    this.Tbl_MesajlarRowChanging(this, new Tbl_MesajlarRowChangeEvent(((Tbl_MesajlarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Tbl_MesajlarRowDeleted != null)) {
+                    this.Tbl_MesajlarRowDeleted(this, new Tbl_MesajlarRowChangeEvent(((Tbl_MesajlarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Tbl_MesajlarRowDeleting != null)) {
+                    this.Tbl_MesajlarRowDeleting(this, new Tbl_MesajlarRowChangeEvent(((Tbl_MesajlarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveTbl_MesajlarRow(Tbl_MesajlarRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet ds = new DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Tbl_MesajlarDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class Tbl_OgrencilerRow : global::System.Data.DataRow {
@@ -2158,6 +2530,22 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OgrenciNumara {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Ogrenciler.OgrenciNumaraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OgrenciNumara\' in table \'Tbl_Ogrenciler\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Ogrenciler.OgrenciNumaraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsOgrenciAdNull() {
                 return this.IsNull(this.tableTbl_Ogrenciler.OgrenciAdColumn);
             }
@@ -2226,6 +2614,18 @@ namespace AspNet_SinavNotSistemi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetOgrenciFotografNull() {
                 this[this.tableTbl_Ogrenciler.OgrenciFotografColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOgrenciNumaraNull() {
+                return this.IsNull(this.tableTbl_Ogrenciler.OgrenciNumaraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOgrenciNumaraNull() {
+                this[this.tableTbl_Ogrenciler.OgrenciNumaraColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2798,6 +3198,144 @@ namespace AspNet_SinavNotSistemi {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Tbl_MesajlarRow : global::System.Data.DataRow {
+            
+            private Tbl_MesajlarDataTable tableTbl_Mesajlar;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Tbl_MesajlarRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTbl_Mesajlar = ((Tbl_MesajlarDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int MesajId {
+                get {
+                    return ((int)(this[this.tableTbl_Mesajlar.MesajIdColumn]));
+                }
+                set {
+                    this[this.tableTbl_Mesajlar.MesajIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MesajGonderen {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Mesajlar.MesajGonderenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MesajGonderen\' in table \'Tbl_Mesajlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Mesajlar.MesajGonderenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MesajAlici {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Mesajlar.MesajAliciColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MesajAlici\' in table \'Tbl_Mesajlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Mesajlar.MesajAliciColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MesajBaslik {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Mesajlar.MesajBaslikColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MesajBaslik\' in table \'Tbl_Mesajlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Mesajlar.MesajBaslikColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MesajIcerik {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Mesajlar.MesajIcerikColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MesajIcerik\' in table \'Tbl_Mesajlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Mesajlar.MesajIcerikColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMesajGonderenNull() {
+                return this.IsNull(this.tableTbl_Mesajlar.MesajGonderenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMesajGonderenNull() {
+                this[this.tableTbl_Mesajlar.MesajGonderenColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMesajAliciNull() {
+                return this.IsNull(this.tableTbl_Mesajlar.MesajAliciColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMesajAliciNull() {
+                this[this.tableTbl_Mesajlar.MesajAliciColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMesajBaslikNull() {
+                return this.IsNull(this.tableTbl_Mesajlar.MesajBaslikColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMesajBaslikNull() {
+                this[this.tableTbl_Mesajlar.MesajBaslikColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMesajIcerikNull() {
+                return this.IsNull(this.tableTbl_Mesajlar.MesajIcerikColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMesajIcerikNull() {
+                this[this.tableTbl_Mesajlar.MesajIcerikColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2966,6 +3504,40 @@ namespace AspNet_SinavNotSistemi {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Tbl_MesajlarRowChangeEvent : global::System.EventArgs {
+            
+            private Tbl_MesajlarRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarRowChangeEvent(Tbl_MesajlarRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Tbl_MesajlarRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
@@ -3098,6 +3670,7 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("OgrenciTelefon", "OgrenciTelefon");
             tableMapping.ColumnMappings.Add("OgrenciMail", "OgrenciMail");
             tableMapping.ColumnMappings.Add("OgrenciSifre", "OgrenciSifre");
+            tableMapping.ColumnMappings.Add("OgrenciNumara", "OgrenciNumara");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3106,10 +3679,11 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OgrenciId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Tbl_Ogrenciler] ([OgrenciAd], [OgrenciSoyad], [OgrenciTelefon], [Ogr" +
-                "enciMail], [OgrenciSifre]) VALUES (@OgrenciAd, @OgrenciSoyad, @OgrenciTelefon, @" +
-                "OgrenciMail, @OgrenciSifre)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Tbl_Ogrenciler] ([OgrenciNumara], [OgrenciAd], [OgrenciSoyad], [Ogre" +
+                "nciTelefon], [OgrenciMail], [OgrenciSifre]) VALUES (@OgrenciNumara, @OgrenciAd, " +
+                "@OgrenciSoyad, @OgrenciTelefon, @OgrenciMail, @OgrenciSifre)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciNumara", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciNumara", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSoyad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3117,10 +3691,9 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Tbl_Ogrenciler] SET [OgrenciAd] = @OgrenciAd, [OgrenciSoyad] = @OgrenciSo" +
-                "yad, [OgrenciTelefon] = @OgrenciTelefon, [OgrenciMail] = @OgrenciMail, [OgrenciS" +
-                "ifre] = @OgrenciSifre WHERE (([OgrenciId] = @Original_OgrenciId))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tbl_Ogrenciler] SET [OgrenciNumara] = @OgrenciNumara, [OgrenciAd] = @OgrenciAd, [OgrenciSoyad] = @OgrenciSoyad, [OgrenciTelefon] = @OgrenciTelefon, [OgrenciMail] = @OgrenciMail, [OgrenciSifre] = @OgrenciSifre WHERE (([OgrenciId] = @Original_OgrenciId))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciNumara", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciNumara", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSoyad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3142,13 +3715,13 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT OgrenciId, OgrenciAd, OgrenciSoyad, OgrenciTelefon, OgrenciMail, OgrenciSi" +
-                "fre\r\nFROM     Tbl_Ogrenciler";
+            this._commandCollection[0].CommandText = "SELECT OgrenciId, OgrenciNumara, OgrenciAd, OgrenciSoyad, OgrenciTelefon, Ogrenci" +
+                "Mail, OgrenciSifre\r\nFROM     Tbl_Ogrenciler";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT OgrenciAd, OgrenciSoyad, OgrenciFotograf, OgrenciTelefon, OgrenciMail, Ogr" +
-                "enciSifre\r\nFROM     Tbl_Ogrenciler\r\nWHERE  (OgrenciId = @OgrenciId)";
+            this._commandCollection[1].CommandText = "SELECT OgrenciAd, OgrenciId, OgrenciMail, OgrenciNumara, OgrenciSifre, OgrenciSoy" +
+                "ad, OgrenciTelefon FROM Tbl_Ogrenciler WHERE (OgrenciId = @OgrenciId)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -3289,36 +3862,42 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre) {
-            if ((OgrenciAd == null)) {
+        public virtual int Insert(string OgrenciNumara, string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre) {
+            if ((OgrenciNumara == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(OgrenciAd));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(OgrenciNumara));
             }
-            if ((OgrenciSoyad == null)) {
+            if ((OgrenciAd == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(OgrenciSoyad));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(OgrenciAd));
             }
-            if ((OgrenciTelefon == null)) {
+            if ((OgrenciSoyad == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(OgrenciTelefon));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(OgrenciSoyad));
             }
-            if ((OgrenciMail == null)) {
+            if ((OgrenciTelefon == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(OgrenciMail));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(OgrenciTelefon));
             }
-            if ((OgrenciSifre == null)) {
+            if ((OgrenciMail == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(OgrenciSifre));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(OgrenciMail));
+            }
+            if ((OgrenciSifre == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(OgrenciSifre));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3340,38 +3919,44 @@ namespace AspNet_SinavNotSistemi.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, int Original_OgrenciId) {
-            if ((OgrenciAd == null)) {
+        public virtual int Update(string OgrenciNumara, string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, int Original_OgrenciId) {
+            if ((OgrenciNumara == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(OgrenciAd));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(OgrenciNumara));
             }
-            if ((OgrenciSoyad == null)) {
+            if ((OgrenciAd == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(OgrenciSoyad));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(OgrenciAd));
             }
-            if ((OgrenciTelefon == null)) {
+            if ((OgrenciSoyad == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(OgrenciTelefon));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(OgrenciSoyad));
             }
-            if ((OgrenciMail == null)) {
+            if ((OgrenciTelefon == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(OgrenciMail));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(OgrenciTelefon));
             }
-            if ((OgrenciSifre == null)) {
+            if ((OgrenciMail == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(OgrenciSifre));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(OgrenciMail));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_OgrenciId));
+            if ((OgrenciSifre == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(OgrenciSifre));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_OgrenciId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5042,6 +5627,344 @@ WHERE Tbl_Notlar.NotId = @NotId";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Tbl_MesajlarTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Tbl_MesajlarTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Tbl_Mesajlar";
+            tableMapping.ColumnMappings.Add("MesajId", "MesajId");
+            tableMapping.ColumnMappings.Add("MesajGonderen", "MesajGonderen");
+            tableMapping.ColumnMappings.Add("MesajAlici", "MesajAlici");
+            tableMapping.ColumnMappings.Add("MesajBaslik", "MesajBaslik");
+            tableMapping.ColumnMappings.Add("MesajIcerik", "MesajIcerik");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Tbl_Mesajlar] WHERE (([MesajId] = @Original_MesajId))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MesajId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Tbl_Mesajlar] ([MesajGonderen], [MesajAlici], [MesajBaslik], [MesajI" +
+                "cerik]) VALUES (@MesajGonderen, @MesajAlici, @MesajBaslik, @MesajIcerik)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajGonderen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajGonderen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajAlici", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajAlici", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajBaslik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajBaslik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajIcerik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajIcerik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Tbl_Mesajlar] SET [MesajGonderen] = @MesajGonderen, [MesajAlici] = @Mesaj" +
+                "Alici, [MesajBaslik] = @MesajBaslik, [MesajIcerik] = @MesajIcerik WHERE (([Mesaj" +
+                "Id] = @Original_MesajId))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajGonderen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajGonderen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajAlici", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajAlici", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajBaslik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajBaslik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajIcerik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajIcerik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MesajId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DbSinavNotSistemiConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT *\r\nFROM     Tbl_Mesajlar\r\nWHERE  (MesajAlici = 1114)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillMesajGetir(DataSet.Tbl_MesajlarDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet.Tbl_MesajlarDataTable OgretmenGelenMesaj() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet.Tbl_MesajlarDataTable dataTable = new DataSet.Tbl_MesajlarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet.Tbl_MesajlarDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Tbl_Mesajlar");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_MesajId) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MesajId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik) {
+            if ((MesajGonderen == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MesajGonderen));
+            }
+            if ((MesajAlici == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(MesajAlici));
+            }
+            if ((MesajBaslik == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MesajBaslik));
+            }
+            if ((MesajIcerik == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(MesajIcerik));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik, int Original_MesajId) {
+            if ((MesajGonderen == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(MesajGonderen));
+            }
+            if ((MesajAlici == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(MesajAlici));
+            }
+            if ((MesajBaslik == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(MesajBaslik));
+            }
+            if ((MesajIcerik == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(MesajIcerik));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_MesajId));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5060,6 +5983,8 @@ WHERE Tbl_Notlar.NotId = @NotId";
         private Tbl_OgretmenlerTableAdapter _tbl_OgretmenlerTableAdapter;
         
         private Tbl_DerslerTableAdapter _tbl_DerslerTableAdapter;
+        
+        private Tbl_MesajlarTableAdapter _tbl_MesajlarTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -5134,6 +6059,20 @@ WHERE Tbl_Notlar.NotId = @NotId";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Tbl_MesajlarTableAdapter Tbl_MesajlarTableAdapter {
+            get {
+                return this._tbl_MesajlarTableAdapter;
+            }
+            set {
+                this._tbl_MesajlarTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -5167,6 +6106,10 @@ WHERE Tbl_Notlar.NotId = @NotId";
                             && (this._tbl_DerslerTableAdapter.Connection != null))) {
                     return this._tbl_DerslerTableAdapter.Connection;
                 }
+                if (((this._tbl_MesajlarTableAdapter != null) 
+                            && (this._tbl_MesajlarTableAdapter.Connection != null))) {
+                    return this._tbl_MesajlarTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -5190,6 +6133,9 @@ WHERE Tbl_Notlar.NotId = @NotId";
                     count = (count + 1);
                 }
                 if ((this._tbl_DerslerTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._tbl_MesajlarTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -5239,6 +6185,15 @@ WHERE Tbl_Notlar.NotId = @NotId";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tbl_MesajlarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Mesajlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_MesajlarTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -5281,6 +6236,14 @@ WHERE Tbl_Notlar.NotId = @NotId";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tbl_MesajlarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Mesajlar.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_MesajlarTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -5291,6 +6254,14 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._tbl_MesajlarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Mesajlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_MesajlarTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tbl_DuyurularTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Duyurular.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -5382,6 +6353,11 @@ WHERE Tbl_Notlar.NotId = @NotId";
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._tbl_MesajlarTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_MesajlarTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -5448,6 +6424,15 @@ WHERE Tbl_Notlar.NotId = @NotId";
                     if (this._tbl_DerslerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tbl_DerslerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_DerslerTableAdapter.Adapter);
+                    }
+                }
+                if ((this._tbl_MesajlarTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_MesajlarTableAdapter, this._tbl_MesajlarTableAdapter.Connection);
+                    this._tbl_MesajlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_MesajlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_MesajlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_MesajlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_MesajlarTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -5523,6 +6508,10 @@ WHERE Tbl_Notlar.NotId = @NotId";
                 if ((this._tbl_DerslerTableAdapter != null)) {
                     this._tbl_DerslerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_DerslerTableAdapter]));
                     this._tbl_DerslerTableAdapter.Transaction = null;
+                }
+                if ((this._tbl_MesajlarTableAdapter != null)) {
+                    this._tbl_MesajlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_MesajlarTableAdapter]));
+                    this._tbl_MesajlarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

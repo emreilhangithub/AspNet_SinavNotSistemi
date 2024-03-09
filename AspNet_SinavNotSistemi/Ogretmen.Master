@@ -46,11 +46,16 @@
                         <i class="glyphicon glyphicon-briefcase"></i>
                         Dersler
                     </a>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-calendar"></i>
-                        Mesajlar
-                    </a>
-                </li>
+                    <li class="active">
+                        <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            Mesajlar
+                            </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu3">
+                        <li><a href="GelenMesajlar.aspx"><i class="glyphicon glyphicon-download"></i>Gelen Mesajlar</a></li>
+                        <li><a href="GidenMesajlar.aspx"><i class="glyphicon glyphicon-upload"></i>Giden Mesajlar</a></li>
+                        <li><a href="MesajYaz.aspx"><i class="glyphicon glyphicon-edit"></i>Mesaj Oluştur</a></li>
+                    </ul></li>
                 <li class="active">
                     <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false">
                         <i class="glyphicon glyphicon-bell"></i>
@@ -68,7 +73,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="Istatistik.aspx">
                         <i class="glyphicon glyphicon-blackboard"></i>
                         İstatistikler
                     </a>
@@ -80,15 +85,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="Galeri.aspx">
                         <i class="glyphicon glyphicon-picture"></i>
                         Galeri
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-edit"></i>
-                        Ayarlar
+                    <a href="CikisYap.aspx">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                        Çıkış
                     </a>
                 </li>
             </ul>
