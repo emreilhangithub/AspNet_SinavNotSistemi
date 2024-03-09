@@ -6,6 +6,8 @@
 
      <asp:HyperLink ID="HyperLink3" NavigateUrl="~/DersEkle.aspx" runat="server" CssClass="btn btn-info"   >Ders Ekle</asp:HyperLink>
 
+    <h1 style="color: #6f7DCC; font-weight: bold; font-size: 24px;">Ders Listesi</h1>
+
     <table class="table table-bordered table-hover">
         <tr>
             <th scope="col">Ders Id</th>

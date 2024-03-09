@@ -4,6 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
+    <h1 style="color: #6f7DCC; font-weight: bold; font-size: 24px;">Mesaj Oluştur</h1>
+
     <form id="Form1" runat="server">
         <div class="form-group">
             <div>
@@ -27,7 +29,7 @@
                 <textarea id="TextAreaMesajIcerik" cols="20" rows="6" class="form-control" runat="server"></textarea>
             </div>
         </div>
-        <asp:Button ID="BtnMesajGonder" runat="server" Text="Mesaj Gönder" CssClass="btn btn-info" OnClick="BtnMesajGonder_Click"/>
+        <asp:Button ID="BtnMesajGonder" runat="server" Text="Mesaj Gönder" CssClass="btn btn-info" OnClick="BtnMesajGonder_Click" />
     </form>
 
 </asp:Content>

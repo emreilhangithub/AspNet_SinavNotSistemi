@@ -4,6 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
+    <h1 style="color: #808080; font-weight: bold; font-size: 24px;">Şifre Güncelle</h1>
+
     <form id="Form1" runat="server">
         <div class="form-group">
             <br />

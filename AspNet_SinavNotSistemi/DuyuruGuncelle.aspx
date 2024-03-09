@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
+    <h1 style="color: #6f7DCC; font-weight: bold; font-size: 24px;">Duyuru Güncelle</h1>
 
     <form id="Form1" runat="server">
 

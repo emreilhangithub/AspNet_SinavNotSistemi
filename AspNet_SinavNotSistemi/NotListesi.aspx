@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
+    <h1 style="color: #6f7DCC; font-weight: bold; font-size: 24px;">Öğrenci Not Listesi</h1>
 
     <table class="table table-bordered table-hover">
         <tr>
@@ -28,7 +29,9 @@
                         <td><%#Eval("Sinav2")%></td>
                         <td><%#Eval("Sinav3")%></td>
                         <td><%#Eval("Ortalama")%></td>
-                        <td><%#Eval("Durum")%></td>
+                        <td>
+                            <%# Convert.ToBoolean(Eval("Durum")) ? "Geçti" : "Kaldı" %>
+                        </td>
                         <td>
                             <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#"~/NotGuncelle.aspx?NotId="+ Eval("NotId")%>' runat="server" CssClass="btn btn-success">Güncelle</asp:HyperLink>
                         </td>
