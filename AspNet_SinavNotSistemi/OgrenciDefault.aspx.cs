@@ -12,7 +12,8 @@ namespace AspNet_SinavNotSistemi
         protected void Page_Load(object sender, EventArgs e)
         {
             var ogrenciNumarasi = "0";
-            TxtOgrenciNumara.Text = Request.QueryString["OgrenciNumara"];
+            //TxtOgrenciNumara.Text = Request.QueryString["OgrenciNumara"];
+            TxtOgrenciNumara.Text = Session["OgrenciNumara"].ToString();
             ogrenciNumarasi = TxtOgrenciNumara.Text;
 
             DataSetTableAdapters.Tbl_OgrencilerTableAdapter dt = new DataSetTableAdapters.Tbl_OgrencilerTableAdapter();

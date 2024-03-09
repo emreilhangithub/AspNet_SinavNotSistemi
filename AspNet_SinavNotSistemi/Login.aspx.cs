@@ -26,7 +26,9 @@ namespace AspNet_SinavNotSistemi
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
-                Response.Redirect("OgrenciDefault.aspx?OgrenciNumara=" + TxtNumara.Text);
+                Session.Add("OgrenciNumara", TxtNumara.Text);
+                Response.Redirect("OgrenciDefault.aspx");
+                //Response.Redirect("OgrenciDefault.aspx?OgrenciNumara=" + TxtNumara.Text);
             }
             else
             {
