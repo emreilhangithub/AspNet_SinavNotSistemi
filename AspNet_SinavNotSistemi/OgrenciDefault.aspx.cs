@@ -14,7 +14,6 @@ namespace AspNet_SinavNotSistemi
             var ogrenciNumarasi = "0";
             TxtOgrenciNumara.Text = Request.QueryString["OgrenciNumara"];
             ogrenciNumarasi = TxtOgrenciNumara.Text;
-            TxtOgrenciNumara.Text = "Ögrenci Numarası = " + TxtOgrenciNumara.Text;
 
             DataSetTableAdapters.Tbl_OgrencilerTableAdapter dt = new DataSetTableAdapters.Tbl_OgrencilerTableAdapter();
             TxtOgrenciAd.Text = "Ögrenci Ad = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciAd;
@@ -24,6 +23,11 @@ namespace AspNet_SinavNotSistemi
             TxtOgrenciTelefon.Text = "Ögrenci Telefon = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciTelefon;
             TxtOgrenciFotograf.Text = "Ögrenci Fotograf = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciFotograf;
             TxtOgrenciCinsiyet.Text = "Ögrenci Cinsiyet = " + dt.OgrenciPaneliGetir(ogrenciNumarasi)[0].OgrenciCinsiyet;
+        }
+
+        protected void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("OgrenciProfilGuncelle.aspx?OgrenciNumara=" + TxtOgrenciNumara.Text);
         }
     }
 }

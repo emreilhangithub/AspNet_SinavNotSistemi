@@ -458,6 +458,7 @@
     <Content Include="OgrenciDefault.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciEkle.aspx" />
+    <Content Include="OgrenciProfilGuncelle.aspx" />
     <Content Include="OgrenciSil.aspx" />
     <Content Include="BootstrapTema\StyleSheet.css" />
     <Content Include="Web.config" />
@@ -614,6 +615,13 @@
     </Compile>
     <Compile Include="OgrenciEkle.aspx.designer.cs">
       <DependentUpon>OgrenciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciProfilGuncelle.aspx.cs">
+      <DependentUpon>OgrenciProfilGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciProfilGuncelle.aspx.designer.cs">
+      <DependentUpon>OgrenciProfilGuncelle.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciSil.aspx.cs">
       <DependentUpon>OgrenciSil.aspx</DependentUpon>
