@@ -456,7 +456,18 @@ WHERE  (MesajAlici = 1114)</CommandText>
               <Mapping SourceColumn="MesajBaslik" DataSetColumn="MesajBaslik" />
               <Mapping SourceColumn="MesajIcerik" DataSetColumn="MesajIcerik" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectName="DbSinavNotSistemi.dbo.Tbl_Mesajlar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="OgretmenGidenMesajlar" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="OgretmenGidenMesajlar" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="OgretmenGidenMesajlar" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM     Tbl_Mesajlar
+WHERE  (MesajGonderen = 1114)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
