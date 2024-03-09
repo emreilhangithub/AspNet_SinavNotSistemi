@@ -449,6 +449,7 @@
     <Content Include="GelenMesajlar.aspx" />
     <Content Include="GidenMesajlar.aspx" />
     <Content Include="Grafikler.aspx" />
+    <Content Include="Istatistikler.aspx" />
     <Content Include="MesajOlustur.aspx" />
     <Content Include="NotGuncelle.aspx" />
     <Content Include="NotListesi.aspx" />
@@ -546,6 +547,13 @@
     </Compile>
     <Compile Include="Grafikler.aspx.designer.cs">
       <DependentUpon>Grafikler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Istatistikler.aspx.cs">
+      <DependentUpon>Istatistikler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Istatistikler.aspx.designer.cs">
+      <DependentUpon>Istatistikler.aspx</DependentUpon>
     </Compile>
     <Compile Include="MesajOlustur.aspx.cs">
       <DependentUpon>MesajOlustur.aspx</DependentUpon>

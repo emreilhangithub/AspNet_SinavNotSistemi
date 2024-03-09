@@ -482,6 +482,118 @@ WHERE  (MesajGonderen = 1114)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableIstatistikTableAdapter" GeneratorDataComponentClassName="DataTableIstatistikTableAdapter" Name="DataTableIstatistik" UserDataComponentName="DataTableIstatistikTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="Istatistik0" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="Istatistik0" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="Istatistik0" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+FROM     Tbl_Ogrenciler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BilisimNotOrtalamasi" Modifier="Public" Name="BilisimNotOrtalamasi" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="BilisimNotOrtalamasi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(Ortalama) FROM Tbl_Notlar WHERE DersId = 7</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DersSayisi" Modifier="Public" Name="DersSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DersSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     Tbl_Dersler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DinNotOrtalamasi" Modifier="Public" Name="DinNotOrtalamasi" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="DinNotOrtalamasi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(Ortalama) FROM Tbl_Notlar WHERE DersId = 9</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DuyuruSayisi" Modifier="Public" Name="DuyuruSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="DuyuruSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     Tbl_Duyurular</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GeometriNotOrtalamasi" Modifier="Public" Name="GeometriNotOrtalamasi" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="GeometriNotOrtalamasi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(Ortalama) FROM Tbl_Notlar WHERE DersId = 8</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MatematikNotOrtalamasi" Modifier="Public" Name="MatematikNotOrtalamasi" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="MatematikNotOrtalamasi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(Ortalama) FROM Tbl_Notlar WHERE DersId = 2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MesajSayisi" Modifier="Public" Name="MesajSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="MesajSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     Tbl_Mesajlar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="OgrenciSayisi" Modifier="Public" Name="OgrenciSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="OgrenciSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     Tbl_Ogrenciler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="OgretmenSayisi" Modifier="Public" Name="OgretmenSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="OgretmenSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) AS Expr1
+FROM     Tbl_Ogretmenler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Sinav1EnBasariliOgrenci" Modifier="Public" Name="Sinav1EnBasariliOgrenci" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Sinav1EnBasariliOgrenci">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OgrenciAd + ' ' + OgrenciSoyad 
+FROM Tbl_Notlar  
+INNER JOIN Tbl_Ogrenciler ON Tbl_Notlar.OgrenciId = Tbl_Ogrenciler.OgrenciId
+WHERE Sinav1 = (Select max(sinav1) FROM Tbl_Notlar)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DbSinavNotSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TurkceNotOrtalamasi" Modifier="Public" Name="TurkceNotOrtalamasi" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="TurkceNotOrtalamasi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AVG(Ortalama) FROM Tbl_Notlar WHERE DersId = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -660,6 +772,10 @@ WHERE  (MesajGonderen = 1114)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTableIstatistik" msprop:Generator_RowEvHandlerName="DataTableIstatistikRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableIstatistikRowDeleted" msprop:Generator_RowDeletingName="DataTableIstatistikRowDeleting" msprop:Generator_RowEvArgName="DataTableIstatistikRowChangeEvent" msprop:Generator_TablePropName="DataTableIstatistik" msprop:Generator_RowChangedName="DataTableIstatistikRowChanged" msprop:Generator_RowChangingName="DataTableIstatistikRowChanging" msprop:Generator_TableClassName="DataTableIstatistikDataTable" msprop:Generator_RowClassName="DataTableIstatistikRow" msprop:Generator_TableVarName="tableDataTableIstatistik" msprop:Generator_UserTableName="DataTableIstatistik">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -685,8 +801,8 @@ WHERE  (MesajGonderen = 1114)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Tbl_Duyurular_Tbl_Ogretmenler" msdata:parent="Tbl_Ogretmenler" msdata:child="Tbl_Duyurular" msdata:parentkey="OgretmenId" msdata:childkey="DuyuruYapanOgretmen" msprop:Generator_UserParentTable="Tbl_Ogretmenler" msprop:Generator_UserChildTable="Tbl_Duyurular" msprop:Generator_RelationVarName="relationFK_Tbl_Duyurular_Tbl_Ogretmenler" msprop:Generator_ChildPropName="GetTbl_DuyurularRows" msprop:Generator_ParentPropName="Tbl_OgretmenlerRow" msprop:Generator_UserRelationName="FK_Tbl_Duyurular_Tbl_Ogretmenler" />
-      <msdata:Relationship name="FK_Tbl_Ogretmenler_Tbl_Dersler" msdata:parent="Tbl_Dersler" msdata:child="Tbl_Ogretmenler" msdata:parentkey="DersId" msdata:childkey="OgretmenBrans" msprop:Generator_UserParentTable="Tbl_Dersler" msprop:Generator_UserChildTable="Tbl_Ogretmenler" msprop:Generator_RelationVarName="relationFK_Tbl_Ogretmenler_Tbl_Dersler" msprop:Generator_ChildPropName="GetTbl_OgretmenlerRows" msprop:Generator_ParentPropName="Tbl_DerslerRow" msprop:Generator_UserRelationName="FK_Tbl_Ogretmenler_Tbl_Dersler" />
+      <msdata:Relationship name="FK_Tbl_Duyurular_Tbl_Ogretmenler" msdata:parent="Tbl_Ogretmenler" msdata:child="Tbl_Duyurular" msdata:parentkey="OgretmenId" msdata:childkey="DuyuruYapanOgretmen" msprop:Generator_UserParentTable="Tbl_Ogretmenler" msprop:Generator_UserChildTable="Tbl_Duyurular" msprop:Generator_RelationVarName="relationFK_Tbl_Duyurular_Tbl_Ogretmenler" msprop:Generator_ChildPropName="GetTbl_DuyurularRows" msprop:Generator_UserRelationName="FK_Tbl_Duyurular_Tbl_Ogretmenler" msprop:Generator_ParentPropName="Tbl_OgretmenlerRow" />
+      <msdata:Relationship name="FK_Tbl_Ogretmenler_Tbl_Dersler" msdata:parent="Tbl_Dersler" msdata:child="Tbl_Ogretmenler" msdata:parentkey="DersId" msdata:childkey="OgretmenBrans" msprop:Generator_UserParentTable="Tbl_Dersler" msprop:Generator_UserChildTable="Tbl_Ogretmenler" msprop:Generator_RelationVarName="relationFK_Tbl_Ogretmenler_Tbl_Dersler" msprop:Generator_ChildPropName="GetTbl_OgretmenlerRows" msprop:Generator_UserRelationName="FK_Tbl_Ogretmenler_Tbl_Dersler" msprop:Generator_ParentPropName="Tbl_DerslerRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
