@@ -10,7 +10,7 @@
         <th scope="col">Başlık</th>
         <th scope="col">İçerik</th>
         <th scope="col">Tarih</th>
-        <th scope="col">İşlemler</th>
+        <%--<th scope="col">İşlemler</th>--%>
     </tr>
     <tbody>
         <asp:Repeater ID="Repeater1" runat="server">

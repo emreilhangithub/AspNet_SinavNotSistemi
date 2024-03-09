@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:Tbl_Ogretmenler" ZOrder="7" X="1061" Y="58" Height="62" Width="287" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="53" OldDataTableHeight="122" SplitterPosition="28" />
     <Shape ID="DesignTable:OgrNotlar" ZOrder="3" X="138" Y="172" Height="62" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="121" OldDataTableHeight="237" SplitterPosition="28" />
     <Shape ID="DesignTable:Tbl_Dersler" ZOrder="5" X="663" Y="341" Height="62" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="145" OldDataTableHeight="76" SplitterPosition="28" />
-    <Shape ID="DesignTable:Tbl_Mesajlar" ZOrder="1" X="1132" Y="269" Height="296" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:Tbl_Mesajlar" ZOrder="1" X="1132" Y="269" Height="319" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
     <Shape ID="DesignTable:DataTableIstatistik" ZOrder="2" X="1438" Y="54" Height="62" Width="300" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="145" OldDataTableHeight="54" SplitterPosition="28" />
   </Shapes>
   <Connectors>

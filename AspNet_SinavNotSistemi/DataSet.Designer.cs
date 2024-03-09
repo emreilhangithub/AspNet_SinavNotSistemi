@@ -2151,6 +2151,8 @@ namespace AspNet_SinavNotSistemi {
             
             private global::System.Data.DataColumn columnMesajIcerik;
             
+            private global::System.Data.DataColumn columnMesajTarih;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Tbl_MesajlarDataTable() {
@@ -2226,6 +2228,14 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MesajTarihColumn {
+                get {
+                    return this.columnMesajTarih;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2261,14 +2271,15 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_MesajlarRow AddTbl_MesajlarRow(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik) {
+            public Tbl_MesajlarRow AddTbl_MesajlarRow(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik, System.DateTime MesajTarih) {
                 Tbl_MesajlarRow rowTbl_MesajlarRow = ((Tbl_MesajlarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         MesajGonderen,
                         MesajAlici,
                         MesajBaslik,
-                        MesajIcerik};
+                        MesajIcerik,
+                        MesajTarih};
                 rowTbl_MesajlarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTbl_MesajlarRow);
                 return rowTbl_MesajlarRow;
@@ -2303,6 +2314,7 @@ namespace AspNet_SinavNotSistemi {
                 this.columnMesajAlici = base.Columns["MesajAlici"];
                 this.columnMesajBaslik = base.Columns["MesajBaslik"];
                 this.columnMesajIcerik = base.Columns["MesajIcerik"];
+                this.columnMesajTarih = base.Columns["MesajTarih"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2318,6 +2330,8 @@ namespace AspNet_SinavNotSistemi {
                 base.Columns.Add(this.columnMesajBaslik);
                 this.columnMesajIcerik = new global::System.Data.DataColumn("MesajIcerik", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMesajIcerik);
+                this.columnMesajTarih = new global::System.Data.DataColumn("MesajTarih", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMesajTarih);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMesajId}, true));
                 this.columnMesajId.AutoIncrement = true;
@@ -3598,6 +3612,22 @@ namespace AspNet_SinavNotSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime MesajTarih {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTbl_Mesajlar.MesajTarihColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MesajTarih\' in table \'Tbl_Mesajlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Mesajlar.MesajTarihColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMesajGonderenNull() {
                 return this.IsNull(this.tableTbl_Mesajlar.MesajGonderenColumn);
             }
@@ -3642,6 +3672,18 @@ namespace AspNet_SinavNotSistemi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMesajIcerikNull() {
                 this[this.tableTbl_Mesajlar.MesajIcerikColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMesajTarihNull() {
+                return this.IsNull(this.tableTbl_Mesajlar.MesajTarihColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMesajTarihNull() {
+                this[this.tableTbl_Mesajlar.MesajTarihColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6243,6 +6285,7 @@ WHERE Tbl_Notlar.NotId = @NotId";
             tableMapping.ColumnMappings.Add("MesajAlici", "MesajAlici");
             tableMapping.ColumnMappings.Add("MesajBaslik", "MesajBaslik");
             tableMapping.ColumnMappings.Add("MesajIcerik", "MesajIcerik");
+            tableMapping.ColumnMappings.Add("MesajTarih", "MesajTarih");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -6252,22 +6295,25 @@ WHERE Tbl_Notlar.NotId = @NotId";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Tbl_Mesajlar] ([MesajGonderen], [MesajAlici], [MesajBaslik], [MesajI" +
-                "cerik]) VALUES (@MesajGonderen, @MesajAlici, @MesajBaslik, @MesajIcerik)";
+                "cerik], [MesajTarih]) VALUES (@MesajGonderen, @MesajAlici, @MesajBaslik, @MesajI" +
+                "cerik, @MesajTarih)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajGonderen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajGonderen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajAlici", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajAlici", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajBaslik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajBaslik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajIcerik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajIcerik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajTarih", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajTarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [Tbl_Mesajlar] SET [MesajGonderen] = @MesajGonderen, [MesajAlici] = @Mesaj" +
-                "Alici, [MesajBaslik] = @MesajBaslik, [MesajIcerik] = @MesajIcerik WHERE (([Mesaj" +
-                "Id] = @Original_MesajId))";
+                "Alici, [MesajBaslik] = @MesajBaslik, [MesajIcerik] = @MesajIcerik, [MesajTarih] " +
+                "= @MesajTarih WHERE (([MesajId] = @Original_MesajId))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajGonderen", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajGonderen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajAlici", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajAlici", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajBaslik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajBaslik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajIcerik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajIcerik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajTarih", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajTarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MesajId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MesajId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -6284,24 +6330,23 @@ WHERE Tbl_Notlar.NotId = @NotId";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT *\r\nFROM     Tbl_Mesajlar\r\nWHERE  (MesajAlici = 1114)";
+            this._commandCollection[0].CommandText = "SELECT *\r\nFROM     Tbl_Mesajlar\r\nWHERE  (MesajAlici = @MesajAlici)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajAlici", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "MesajAlici", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT *\r\nFROM     Tbl_Mesajlar\r\nWHERE  (MesajGonderen = 1114)";
+            this._commandCollection[1].CommandText = "SELECT MesajAlici, MesajBaslik, MesajGonderen, MesajIcerik, MesajId, MesajTarih F" +
+                "ROM Tbl_Mesajlar WHERE (MesajGonderen = @MesajGonderen)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajGonderen", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "MesajGonderen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "select (OgrenciAd) + \' \' + (OgrenciSoyad) as \'MesajıAlan\',\r\nMesajBaslik,MesajIcer" +
-                "ik,MesajTarih\r\nFROM Tbl_Mesajlar\r\nINNER JOIN Tbl_Ogrenciler ON Tbl_Mesajlar.Mesa" +
-                "jAlici = Tbl_Ogrenciler.OgrenciNumara\r\nWHERE MesajGonderen = @MesajGonderen";
+            this._commandCollection[2].CommandText = @"SELECT Tbl_Mesajlar.MesajAlici, Tbl_Mesajlar.MesajBaslik, Tbl_Mesajlar.MesajGonderen, Tbl_Mesajlar.MesajIcerik, Tbl_Mesajlar.MesajId, Tbl_Mesajlar.MesajTarih FROM Tbl_Mesajlar INNER JOIN Tbl_Ogrenciler ON Tbl_Mesajlar.MesajAlici = Tbl_Ogrenciler.OgrenciNumara WHERE (Tbl_Mesajlar.MesajGonderen = @MesajGonderen)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajGonderen", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "MesajGonderen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "select (OgrenciAd) + \' \' + (OgrenciSoyad) as \'MesajıGonderen\',\r\nMesajBaslik,Mesaj" +
-                "Icerik,MesajTarih\r\nFROM Tbl_Mesajlar\r\nINNER JOIN Tbl_Ogrenciler ON Tbl_Mesajlar." +
-                "MesajGonderen = Tbl_Ogrenciler.OgrenciNumara\r\nWHERE MesajAlici = @MesajAlici";
+            this._commandCollection[3].CommandText = @"SELECT Tbl_Mesajlar.MesajAlici, Tbl_Mesajlar.MesajBaslik, Tbl_Mesajlar.MesajGonderen, Tbl_Mesajlar.MesajIcerik, Tbl_Mesajlar.MesajId, Tbl_Mesajlar.MesajTarih FROM Tbl_Mesajlar INNER JOIN Tbl_Ogrenciler ON Tbl_Mesajlar.MesajGonderen = Tbl_Ogrenciler.OgrenciNumara WHERE (Tbl_Mesajlar.MesajAlici = @MesajAlici)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MesajAlici", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "MesajAlici", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -6319,8 +6364,14 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillMesajGetir(DataSet.Tbl_MesajlarDataTable dataTable) {
+        public virtual int FillMesajGetir(DataSet.Tbl_MesajlarDataTable dataTable, string MesajAlici) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MesajAlici == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MesajAlici));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6332,8 +6383,14 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet.Tbl_MesajlarDataTable OgretmenGelenMesaj() {
+        public virtual DataSet.Tbl_MesajlarDataTable OgretmenGelenMesaj(string MesajAlici) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MesajAlici == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MesajAlici));
+            }
             DataSet.Tbl_MesajlarDataTable dataTable = new DataSet.Tbl_MesajlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6343,8 +6400,14 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(DataSet.Tbl_MesajlarDataTable dataTable) {
+        public virtual int FillBy(DataSet.Tbl_MesajlarDataTable dataTable, string MesajGonderen) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((MesajGonderen == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MesajGonderen));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6356,8 +6419,14 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet.Tbl_MesajlarDataTable OgretmenGidenMesajlar() {
+        public virtual DataSet.Tbl_MesajlarDataTable OgretmenGidenMesajlar(string MesajGonderen) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((MesajGonderen == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(MesajGonderen));
+            }
             DataSet.Tbl_MesajlarDataTable dataTable = new DataSet.Tbl_MesajlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6490,7 +6559,7 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik) {
+        public virtual int Insert(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik, global::System.Nullable<global::System.DateTime> MesajTarih) {
             if ((MesajGonderen == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6515,6 +6584,12 @@ WHERE Tbl_Notlar.NotId = @NotId";
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(MesajIcerik));
             }
+            if ((MesajTarih.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(MesajTarih.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6535,7 +6610,7 @@ WHERE Tbl_Notlar.NotId = @NotId";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik, int Original_MesajId) {
+        public virtual int Update(string MesajGonderen, string MesajAlici, string MesajBaslik, string MesajIcerik, global::System.Nullable<global::System.DateTime> MesajTarih, int Original_MesajId) {
             if ((MesajGonderen == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6560,7 +6635,13 @@ WHERE Tbl_Notlar.NotId = @NotId";
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(MesajIcerik));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_MesajId));
+            if ((MesajTarih.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(MesajTarih.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_MesajId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

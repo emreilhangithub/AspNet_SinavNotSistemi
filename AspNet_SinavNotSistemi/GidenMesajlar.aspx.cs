@@ -12,7 +12,7 @@ namespace AspNet_SinavNotSistemi
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSetTableAdapters.Tbl_MesajlarTableAdapter dt = new DataSetTableAdapters.Tbl_MesajlarTableAdapter();
-            Repeater1.DataSource = dt.OgretmenGidenMesajlar();
+            Repeater1.DataSource = dt.OgretmenGidenMesajlar(Session["OgretmenNumara"].ToString());
             Repeater1.DataBind();
         }
     }
